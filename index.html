@@ -2,14 +2,13 @@
 <html lang="es">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Expertos en desarrollo de Aplicaciones Web y Seguridad Informática! Toda la tecnología que necesitas en un solo lugar!">
+    <meta name="author" content="Ing. Jonathan Mangarret">    
 
-    <title>iComp Soluciones C.A.</title>
+    <title>Soluciones Informáticas - Aplicaciones Web - Seguridad Electrónica - Soporte - Sistemas - Redes</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,13 +41,16 @@
                         <p class="h3">iComp Soluciones C.A.</p>                                           
                     </td>
                     <td width="60%" align="right"> 
-                        <p class="h4"><img src="img/whatsapp.png" width="48px" height="48px">+58 412-8476946 (Venezuela)<br>+57 315-8680076 (Colombia) </p>                                                 
+                        <p class="h4"><img src="img/whatsapp.png" width="48px" height="48px">
+                        +58 412-8476946 (Caracas,VE)<br>
+                        +57 315-8680076 (Arauca,CO) 
+                        </p>                                                 
                     </td>
                 </tr>                
                 <tr>
                     <td width="5%" align="left">
                     <td width="45%" align="left">
-                        <p class="h4">&nbsp;Soluciones Informáticas, Seguridad Electrónica y Computación!</p> 
+                        <p class="h4">&nbsp;Soluciones Informáticas - Aplicaciones Web - Seguridad Electrónica - Soporte</p> 
                     </td>
                     <td width="50%" align="right">                         
                         <a href="#contact" title="icompsoluciones@gmail.com">   <img src="img/mail.png"></a>
@@ -301,21 +303,29 @@
             <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; iComp Soluciones C.A 2016</span>
+                    <span class="copyright">Copyright &copy; iComp Soluciones C.A 2017</span>
                 </div>
-                <div class="col-md-4">
+                <!-- Boton Instapago - Pago en Bs. 
+                <div class="col-md-2">                    
+                    <a href="#" alt="Pagar en Bs." id="instapago" title="Pagar en Bs.">
+                        <img src="instapago/img/instapago-banesco-md.png">
+                    </a>                 
+                </div>
+                -->
+                <div class="col-md-2">
+                    <!-- Boton PayPal - Pago en Dolares -->
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="RP2VUTXD8B7HJ">
-                    <input type="image" src="http://www.terabytesoft.com.ve/new2/images/boton_paypal.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <input type="image" src="http://www.terabytesoft.com.ve/new2/images/boton_paypal.gif" border="0" name="submit" alt="Pagar en Dolares por PayPal" title="Pagar en Dolares">
                     <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
                     </form>  
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
+                        <li><a href="#">Politica de Privacidad</a>
                         </li>
-                        <li><a href="#">Terms of Use</a>
+                        <li><a href="#">Terminos de Uso</a>
                         </li>
                     </ul>
                 </div>
@@ -327,14 +337,14 @@
 
 </head>
     <!-- Ventana popUp Modal -->
-<div id="myModal" class="modal fade">
+<div id="myModal-1" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4 class="modal-title">Ofertas de Promoción</h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body-1">
             
                 <!-- 
                 <p>Subscribe to our mailing list to get the latest updates straight in your inbox.</p>
@@ -352,6 +362,26 @@
         </div>
     </div>
 </div>
+
+    <!-- Ventana popUp Modal Instapago -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">
+                        PROCESAR PAGO 
+                        <img src="instapago/img/visa-master-card.jpg" title="Solo Tarjetas Visa y Mastercard">
+                        <img src="instapago/img/ssl-secure.jpg" title="Transacciones seguras encriptadas con SSL">
+                        <img src="instapago/img/ssl-secure-pq.png" title="Transacciones seguras encriptadas con SSL">
+                    </h4>
+                </div>
+                <div class="modal-body" id="formInstapago">                                                  
+                    
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- /.container -->
 
     <!-- jQuery -->
@@ -368,16 +398,19 @@
     </script>
 
     <script type="text/javascript">
-    $(document).ready(function(){
-        //$("#myModal").modal('show');
-    });
+        $(document).ready(function () {
+            $('#formInstapago').load('instapago/formPago.html');
+            $("#instapago").click(function(){
+                $("#myModal").modal('show');
+            });
+         });        
     </script>
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
-    <!--Start of Tawk.to Script-->
+    <!--Start Chat online of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
