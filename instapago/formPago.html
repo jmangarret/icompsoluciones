@@ -1,0 +1,179 @@
+
+
+                    <!-- CREDIT CARD FORM STARTS HERE -->
+                    <div class="panel panel-default credit-card-box">
+                        <!-- 
+                        <div class="panel-heading display-table" >
+                            <div class="row display-tr" >
+                                <h3 class="panel-title display-td text-uppercase">detalles del pago</h3>
+                                <div class="display-td" >
+                                    <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                        <div class="panel-body">
+                            <form role="form" method="post" action="javascript:void(0);" enctype="application/x-www-form-urlencoded" onsubmit="return ValPago(); return document.MM_returnValue" name="FormPayUsuario" id="FormPayUsuario">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="conceptop" class="text-uppercase">
+                                                concepto de pago
+                                            </label>
+                                            <div class="input-group">
+                                                <input
+                                                       type="tel"
+                                                       class="form-control"
+                                                       name="concepto"
+                                                       id="concepto"
+                                                       placeholder="Descripcion del Pago"
+                                                       required autofocus
+                                                       />
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-info-circle"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="cardNumber" class="text-uppercase">
+                                                número de tarjeta de credito
+                                            </label>
+                                            <div class="input-group">
+                                                <input
+                                                       type="tel"
+                                                       class="form-control"
+                                                       name="cardNumber"
+                                                       id="cardNumber"
+                                                       placeholder="Num. de Tarjeta (20 digitos)"
+                                                       required autofocus
+                                                       />
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-credit-card"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-md-6">
+                                        <div class="form-group">
+                                            <label for="cardNumber" class="text-uppercase">
+                                                titular de tarjeta
+                                            </label>
+                                            <div class="input-group">
+                                                <input
+                                                       type="tel"
+                                                       class="form-control"
+                                                       name="cardHolder"
+                                                       id="cardHolder"
+                                                       placeholder="Nombre Impreso en la TDC"
+                                                       required autofocus
+                                                       />
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-user"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-6 pull-right">
+                                        <div class="form-group">
+                                            <label for="cardNumber" class="text-uppercase">
+                                                cedula / rif
+                                            </label>
+                                            <div class="input-group">
+                                                <input
+                                                       type="tel"
+                                                       class="form-control"
+                                                       name="cardHolderId"
+                                                       id="cardHolderId"
+                                                       placeholder="Nro. de Cedula"
+                                                       required autofocus
+                                                       />
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-info-circle"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="cardExpiry" class="text-uppercase">
+                                                <span class="hidden-xs">fecha</span> vencimiento
+                                            </label>
+                                            <input
+                                                   type="tel"
+                                                   class="form-control"
+                                                   name="cardExpiry"
+                                                   placeholder="MM/YY"
+                                                   required
+                                                   />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-md-4">
+                                        <div class="form-group">
+                                            <label for="cardCVC">
+                                                CODIGO CVC
+                                            </label>
+                                            <input
+                                                   type="tel"
+                                                   class="form-control"
+                                                   name="cardCVC"
+                                                   placeholder="CVC (3 Digitos)"
+                                                   required
+                                                   />
+                                        </div>
+                                    </div>                                    
+                                    <div class="col-xs-4 col-md-4 pull-right">
+                                        <div class="form-group">
+                                            <label for="monto">
+                                                MONTO(BS)
+                                            </label>
+                                            <input
+                                                   type="tel"
+                                                   class="form-control"
+                                                   name="monto"
+                                                   placeholder="0.00"
+                                                   required
+                                                   />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-success btn-sm btn-lg btn-block text-uppercase" type="submit">
+                                            procesar pago
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12"><br/>
+                                        <p id="Instapago"></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- CREDIT CARD FORM ENDS HERE -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script>
+            function ValPago() {
+                var str, ruta=document.FormPayUsuario
+                var resultado=$.ajax({
+                    type:"POST",
+                    data:$("#FormPayUsuario").serialize(),
+                    url:'procesarPago.php',
+                    dataType:'text',async:false
+                }).responseText;
+                document.getElementById("Instapago").innerHTML=resultado;
+            }
+        </script>
