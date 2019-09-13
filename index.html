@@ -306,13 +306,13 @@
                 <div class="col-md-4">
                     <span class="copyright">Copyright &copy; iComp Soluciones C.A 2017</span>
                 </div>
-                <!-- Boton Instapago - Pago en Bs. 
+                
                 <div class="col-md-2">                    
                     <a href="#" alt="Pagar en Bs." id="instapago" title="Pagar en Bs.">
                         <img src="instapago/img/instapago-banesco-md.png">
                     </a>                 
                 </div>
-                -->
+                
                 <div class="col-md-2">
                     <!-- Boton PayPal - Pago en Dolares -->
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -424,6 +424,31 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+
+<div id="list_section"></div>
+  <script>
+    $(function() {
+    $.ajax({
+      type: "GET",
+      dataType: "jsonp",
+      cache: false,
+      url: "https://api.instagram.com/v1/users/bb0c85c14be24379b2717c347d27469c/media/recent/?access_token=3239273341.bb0c85c.8ed91826b9bf4968bd1af10f34af0978",
+      success: function(data) {
+        console.log(data);
+        for (var i = 0; i < 6; i++) {
+          if(data.data[i]) { // to prevent a bug with non missing images
+             $("#list_section").append(`
+              <div class="instagram-placeholder">
+                <a href="${data.data[i].link}" target="_blank">
+                  <img class="instagram-image" src="${data.data[i].images.thumbnail.url}" alt="">
+                </a>
+              </div>`);
+          }
+        }
+      }
+    });
+  });
+  </script>
 
 </body>
 
